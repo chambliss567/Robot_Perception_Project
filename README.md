@@ -2,7 +2,7 @@
 
 This project was completed on the Construct platform, an online learning platform with dozens of courses teaching different fundamentals of ROS and robotics
 
-This project sets out to fulfill the requirements defined in the **PhantomX Hexapod Perception Project**, part of the **ROS Perception in 5 Days** class. The project specifications and requirements are as follows
+This project sets out to fulfill the requirements defined in the **PhantomX Hexapod Perception Project**, part of the **ROS Perception** class. The project specifications and requirements are as follows
 
 ### Specifications: 
 1. A PhantomCHexapod, created by TrossenRobotics, will be used. The transforms associated with this robot are defined in **hexapod_transforms.txt**
