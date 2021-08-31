@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+
+<AttributeLib>
+    <Attribute Name="NotFractal" Type="Size" MinAreaPc="0.00" MaxAreaPc="100"/>
+    <Attribute Name="HSVColorPinkDonut" Type="HSVColor" Hmin="138" Hmax="170" Smin="80" Smax="170" Vmin="212" Vmax="255"/>
+    <Attribute Name="DonutSizeAttribute" Type="Size" MinAreaPc="0.05" MaxAreaPc="100"/>
+    <Attribute Name="AlienSizeAttribute" Type="Size" MinAreaPc="0.15" MaxAreaPc="100"/>
+    <Attribute Name="AlienGunHist" Type="HistColor" Histogram="histograms/alien_gun.yaml"/>
+    <Attribute Name="AlienHist" Type="HistColor" Histogram="histograms/alien.yaml"/>
+</AttributeLib>
+
+<SimpleObjectBase>
+    <SimpleObject Name="PinkDonut" ID="1">
+        <Attribute Type="Detect">HSVColorPinkDonut</Attribute>
+        <Attribute Type="Check">NotFractal</Attribute>
+        <Attribute Type="Check">DonutSizeAttribute</Attribute>
+    </SimpleObject>
+
+    <SimpleObject Name="Alien" ID="2">
+        <Attribute Type="Detect">AlienHist</Attribute>
+        <Attribute Type="Check">AlienSizeAttribute</Attribute>
+    </SimpleObject>
+
+    <SimpleObject Name="AlienGun" ID="3">
+        <Attribute Type="Detect">AlienGunHist</Attribute>
+    </SimpleObject>
+</SimpleObjectBase>
+
+
+<RelationLib>
+
+    <RelationShip Type="SpaceRight" Name="right"/>
+
+</RelationLib>
+
+
+<ComplexObjectBase>
+
+    <ComplexObject ID="1" Name="AlienGunRight">
+        <SimpleObject Class="Alien" InnerName="Alien_Body"/>
+        <SimpleObject Class="AlienGun" InnerName="Alien_Gun"/>
+        
+        <Relation Obj1="Alien_Body" Obj2="Alien_Gun" Relationship="right"/>
+    </ComplexObject>
+
+    
+</ComplexObjectBase>

@@ -1,0 +1,6 @@
+<launch>
+  <!-- Launch face detection node-->
+  <include file="$(find my_hexapod_perception)/launch/face_detection.launch" />
+  <!-- Launch face recognition -->
+  <node pkg="my_hexapod_perception" type="recognize_face.py" name="face_recognising_python_node" output="screen" />
+</launch>

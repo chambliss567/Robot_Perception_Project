@@ -1,0 +1,13 @@
+# Depth Camera Info
+/camera/depth_registered/camera_info
+# 2D depth image
+/camera/depth_registered/image_raw
+# Point Cloud 
+/camera/depth_registered/points
+
+# RGB camera info
+/camera/rgb/camera_info
+# RGB camera raw image
+/camera/rgb/image_raw
+# RGB camera compressed ( faster to process )
+/camera/rgb/image_raw/compressed
