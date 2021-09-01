@@ -6,7 +6,7 @@ This project sets out to fulfill the requirements defined in the **PhantomX Hexa
 
 ### Specifications: 
 1. A PhantomCHexapod, created by TrossenRobotics, will be used. The transforms associated with this robot are defined in **hexapod_transforms.txt**
-2. The robot's environment can be seen in [hexapod_environment.png](hexapod_environment.png). At of the circle locations along the green path are the following:
+2. The robot's environment can be seen in [hexapod_environment.png](hexapod_environment.PNG). At of the circle locations along the green path are the following:
   - A stationary pink donut
   - A constantly rotating green alien holding a large gun
   - A stationary girl
